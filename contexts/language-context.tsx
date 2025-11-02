@@ -13,17 +13,23 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(defaultLocale)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    const savedLocale = localStorage.getItem("locale") as Locale
-    if (savedLocale && translations[savedLocale]) {
-      setLocaleState(savedLocale)
+    setIsClient(true)
+    if (typeof window !== 'undefined') {
+      const savedLocale = localStorage.getItem("locale") as Locale
+      if (savedLocale && translations[savedLocale]) {
+        setLocaleState(savedLocale)
+      }
     }
   }, [])
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale)
-    localStorage.setItem("locale", newLocale)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("locale", newLocale)
+    }
   }
 
   const t = translations[locale]

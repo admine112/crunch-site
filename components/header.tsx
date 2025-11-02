@@ -19,7 +19,6 @@ export function Header() {
     { href: "/#about", label: t.nav.about },
     { href: "/schedule", label: t.nav.sermons },
     { href: "/events", label: t.nav.events },
-    { href: "/gallery", label: "Фотогалерея" },
     { href: "/contact", label: t.nav.contact },
   ]
 

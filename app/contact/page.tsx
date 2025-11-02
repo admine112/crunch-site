@@ -51,6 +51,13 @@ export default function ContactPage() {
     ;(e.target as HTMLFormElement).reset()
   }
 
+  const handlePrayerRequest = () => {
+    toast({
+      title: "Prayer Request",
+      description: "We will pray for you. Please contact us directly for personal prayer requests.",
+    })
+  }
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -213,23 +220,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              {t.footer.contactInfo}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t.footer.address}
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <ChurchMap />
-          </div>
-        </div>
-      </section>
-
       {/* Prayer Request Section */}
       <section className="bg-primary py-12">
         <div className="container mx-auto px-4 text-center">
@@ -237,7 +227,7 @@ export default function ContactPage() {
           <p className="mb-6 text-primary-foreground/90">
             {t.contact.prayerDescription}
           </p>
-          <Button size="lg" variant="secondary">
+          <Button size="lg" variant="secondary" onClick={handlePrayerRequest}>
             {t.contact.prayerButton}
           </Button>
         </div>
