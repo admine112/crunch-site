@@ -9,17 +9,29 @@ import { Globe } from "@/components/icons"
 export function LanguageSwitcher() {
   const { locale, setLocale } = useLanguage()
 
+  const handleLocaleChange = (newLocale: string) => {
+    try {
+      setLocale(newLocale as any)
+    } catch (error) {
+      console.error('Failed to change locale:', error)
+    }
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-primary">
+        <Button variant="ghost" size="icon" className="text-primary touch-target">
           <Globe className="h-5 w-5" />
           <span className="sr-only">Change language</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="min-w-[120px]">
         {locales.map((loc) => (
-          <DropdownMenuItem key={loc} onClick={() => setLocale(loc)} className={locale === loc ? "bg-accent" : ""}>
+          <DropdownMenuItem 
+            key={loc} 
+            onClick={() => handleLocaleChange(loc)} 
+            className={`cursor-pointer touch-target ${locale === loc ? "bg-accent font-semibold" : ""}`}
+          >
             {localeNames[loc]}
           </DropdownMenuItem>
         ))}

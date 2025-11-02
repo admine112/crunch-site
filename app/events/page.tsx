@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CalendarIcon as Calendar, Clock, MapPin, Users } from "@/components/icons"
+import Image from "next/image"
 
 type Event = {
   id: number
@@ -158,6 +159,12 @@ export default function EventsPage() {
   const EventCard = ({ event }: { event: Event }) => (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative h-48 w-full bg-muted">
+        <Image 
+          src="/богослужение.jpg" 
+          alt="Church service background" 
+          fill 
+          className="object-cover" 
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
           <div>
             <h3 className="font-serif text-xl font-bold text-white">{getEventTitle(event)}</h3>
@@ -201,35 +208,35 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <section className="bg-primary py-12 text-center">
+      <section className="bg-primary py-8 sm:py-12 text-center">
         <div className="container mx-auto px-4">
-          <h1 className="font-serif text-4xl font-bold text-primary-foreground mb-4">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             {t.events.title}
           </h1>
-          <p className="text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/90 max-w-2xl mx-auto text-sm sm:text-base">
             {t.events.description}
           </p>
         </div>
       </section>
 
       {/* Events Content */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-12 md:py-16">
         <Tabs defaultValue="upcoming" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
-            <TabsTrigger value="upcoming">{t.events.upcomingTitle}</TabsTrigger>
-            <TabsTrigger value="past">{t.events.pastTitle}</TabsTrigger>
+          <TabsList className="grid w-full max-w-sm mx-auto grid-cols-2 mb-6 md:mb-8">
+            <TabsTrigger value="upcoming" className="text-sm">{t.events.upcomingTitle}</TabsTrigger>
+            <TabsTrigger value="past" className="text-sm">{t.events.pastTitle}</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="upcoming" className="space-y-8">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <TabsContent value="upcoming" className="space-y-6 md:space-y-8">
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {upcomingEvents.map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}
             </div>
           </TabsContent>
 
-          <TabsContent value="past" className="space-y-8">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <TabsContent value="past" className="space-y-6 md:space-y-8">
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {pastEvents.map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}

@@ -27,7 +27,7 @@ export function LoadingAnimation() {
 
   return (
     <div 
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
+      className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800 transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
       style={{ pointerEvents: fadeOut ? 'none' : 'auto' }}
     >
       {/* Облака */}
@@ -103,10 +103,10 @@ export function LoadingAnimation() {
         {/* Текст */}
         <div className="space-y-4">
           <h1 className="text-3xl font-bold text-primary animate-fade-in-up">
-            Light of Hope
+            Світло Надії
           </h1>
           <p className="text-lg text-muted-foreground animate-fade-in-up animation-delay-300">
-            Where Faith Meets Future
+            Де віра зустрічає майбутнє
           </p>
         </div>
 
@@ -150,11 +150,11 @@ export function LoadingAnimation() {
           100% { opacity: 1; transform: translateY(0px); }
         }
         
-        .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
-        .animate-float-medium { animation: float-medium 4s ease-in-out infinite; }
-        .animate-float-fast { animation: float-fast 3s ease-in-out infinite; }
-        .animate-bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
-        .animate-fade-in-up { animation: fade-in-up 1s ease-out forwards; }
+        .animate-float-slow { animation: float-slow 4.6s ease-in-out infinite; }
+        .animate-float-medium { animation: float-medium 3.1s ease-in-out infinite; }
+        .animate-float-fast { animation: float-fast 2.3s ease-in-out infinite; }
+        .animate-bounce-gentle { animation: bounce-gentle 1.5s ease-in-out infinite; }
+        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
         .animation-delay-0 { animation-delay: 0ms; }
         .animation-delay-150 { animation-delay: 150ms; }
         .animation-delay-300 { animation-delay: 300ms; }

@@ -10,6 +10,7 @@ import { HtmlLang } from "@/components/html-lang"
 import { LoadingAnimation } from "@/components/loading-animation"
 import { ServiceAnnouncementPopup } from "@/components/service-announcement-popup"
 import "./globals.css"
+import "./mobile-optimizations.css"
 
 import { Libre_Baskerville, IBM_Plex_Mono } from 'next/font/google'
 

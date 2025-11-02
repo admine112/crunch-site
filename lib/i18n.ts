@@ -48,6 +48,7 @@ export type Translations = {
     hero: string
     tagline: string
     taglineShort: string
+    heroTitle?: string
     welcomeTitle: string
     welcomeText: string
     joinButton: string
@@ -64,6 +65,21 @@ export type Translations = {
     upcomingEventsTitle: string
     watchSermon: string
     supportMinistry: string
+    sermonTitles: {
+      lightInDarkness: string
+      walkingInFaith: string
+      godsGrace: string
+    }
+    sermonDescriptions: {
+      lightInDarkness: string
+      walkingInFaith: string
+      godsGrace: string
+    }
+    pastorNames: {
+      pastorJohn: string
+      pastorSarah: string
+      pastorMichael: string
+    }
   }
   about: {
     title: string
@@ -111,15 +127,21 @@ export type Translations = {
   }
   contact: {
     title: string
+    subtitle?: string
     nameLabel: string
     emailLabel: string
     messageLabel: string
     submitButton: string
     newsletterTitle: string
+    newsletterDescription?: string
     subscribeButton: string
     prayerTitle: string
     prayerDescription: string
     prayerButton: string
+    visitUs?: string
+    callUs?: string
+    emailUs?: string
+    workingHours?: string
   }
   events: {
     title: string
@@ -179,6 +201,21 @@ export const translations: Record<Locale, Translations> = {
       upcomingEventsTitle: "Найближчі події",
       watchSermon: "Переглянути проповідь →",
       supportMinistry: "Підтримати служіння",
+      sermonTitles: {
+        lightInDarkness: "Світло у темряві",
+        walkingInFaith: "Ходіння у вірі",
+        godsGrace: "Божа благодать"
+      },
+      sermonDescriptions: {
+        lightInDarkness: "Проповідь про знаходження світла надії навіть у найтемніші моменти життя. Дізнайтеся, як віра може освітлити ваш шлях.",
+        walkingInFaith: "Дослідження того, що означає жити вірою щодня. Практичні поради для зміцнення духовного життя.",
+        godsGrace: "Глибоке розуміння Божої благодаті та її трансформуючої сили в нашому житті. Відкрийте для себе безумовну любов Бога."
+      },
+      pastorNames: {
+        pastorJohn: "Пастор Іван",
+        pastorSarah: "Пастор Сара",
+        pastorMichael: "Пастор Михайло"
+      }
     },
     about: {
       title: "Про церкву",
@@ -391,22 +428,22 @@ export const translations: Record<Locale, Translations> = {
       ],
     },
     contact: {
-      title: "Зв'яжіться з нами",
+      title: "Контакти",
       subtitle: "Ми б хотіли почути від вас",
       nameLabel: "Ім'я",
       emailLabel: "Email",
       messageLabel: "Повідомлення",
       submitButton: "Надіслати",
-      newsletterTitle: "Підпишіться на розсилку",
-      newsletterDescription: "Отримуйте оновлення про наші новини, події та повідомлення. Приєднайтеся до нашої спільноти!",
+      newsletterTitle: "Підписка на новини",
+      newsletterDescription: "Отримуйте останні новини та оновлення від нашої церкви",
       subscribeButton: "Підписатися",
-      prayerTitle: "Потрібна молитва?",
-      prayerDescription: "Наша команда молитви тут для вас. Надішліть ваше прохання про молитву, і ми піднесемо вас у молитві.",
-      prayerButton: "Надіслати прохання про молитву",
+      prayerTitle: "Прохання про молитву",
+      prayerDescription: "Ми віримо в силу молитви. Поділіться своїми потребами з нами",
+      prayerButton: "Надіслати прохання",
       visitUs: "Відвідайте нас",
       callUs: "Подзвоніть нам",
       emailUs: "Напишіть нам",
-      workingHours: "Пн-Пт: 9:00 - 17:00",
+      workingHours: "Пн-Пт: 9:00-17:00",
     },
     events: {
       title: "Події",
@@ -464,6 +501,21 @@ export const translations: Record<Locale, Translations> = {
       upcomingEventsTitle: "Upcoming Events",
       watchSermon: "Watch Sermon →",
       supportMinistry: "Support Our Ministry",
+      sermonTitles: {
+        lightInDarkness: "Light in the Darkness",
+        walkingInFaith: "Walking in Faith",
+        godsGrace: "God's Grace"
+      },
+      sermonDescriptions: {
+        lightInDarkness: "A sermon about finding light and hope even in life's darkest moments. Discover how faith can illuminate your path forward.",
+        walkingInFaith: "Exploring what it means to live by faith daily. Practical advice for strengthening your spiritual life and relationship with God.",
+        godsGrace: "Deep understanding of God's grace and its transformative power in our lives. Discover God's unconditional love for you."
+      },
+      pastorNames: {
+        pastorJohn: "Pastor John",
+        pastorSarah: "Pastor Sarah",
+        pastorMichael: "Pastor Michael"
+      }
     },
     about: {
       title: "About Church",
@@ -738,17 +790,32 @@ export const translations: Record<Locale, Translations> = {
       joinButton: "Doe mee",
       learnButton: "Meer informatie",
       aboutTitle: "Over ons",
-      aboutDescription: "Onze kerk is een plaats waar gelovigen samenkomen om geloof, gebed en de liefde van Christus te delen. We nodigen u uit om deel uit te maken van onze gemeenschap.",
+      aboutDescription: "Onze kerk is een plaats waar gelovigen samenkomen om geloof, gebed en de liefde van Christus te delen. We nodigen je uit om deel te nemen aan onze gemeenschap.",
       learnMore: "Meer informatie",
       sermonsTitle: "Preken",
       eventsTitle: "Evenementen",
       donateButton: "Doneren",
-      supportText: "Uw genereuze donaties helpen ons onze missie van hoop en liefde voor onze gemeenschap voort te zetten",
+      supportText: "Uw genereuze donaties helpen ons onze missie voort te zetten",
       churchGallery: "Kerkgalerij",
       calendarMonth: "November 2025",
       upcomingEventsTitle: "Aankomende evenementen",
-      watchSermon: "Preek bekijken →",
-      supportMinistry: "Ondersteun ons Ministerie",
+      watchSermon: "Bekijk preek →",
+      supportMinistry: "Ondersteun ons ministerie",
+      sermonTitles: {
+        lightInDarkness: "Licht in de duisternis",
+        walkingInFaith: "Wandelen in geloof",
+        godsGrace: "Gods genade"
+      },
+      sermonDescriptions: {
+        lightInDarkness: "Een preek over het vinden van licht en hoop, zelfs in de donkerste momenten van het leven. Ontdek hoe geloof je pad kan verlichten.",
+        walkingInFaith: "Onderzoeken wat het betekent om dagelijks in geloof te leven. Praktische adviezen voor het versterken van je spirituele leven.",
+        godsGrace: "Diep begrip van Gods genade en haar transformerende kracht in ons leven. Ontdek Gods onvoorwaardelijke liefde voor jou."
+      },
+      pastorNames: {
+        pastorJohn: "Dominee Jan",
+        pastorSarah: "Dominee Sara",
+        pastorMichael: "Dominee Michiel"
+      }
     },
     about: {
       title: "Over de Kerk",

@@ -49,15 +49,6 @@ export function ServiceAnnouncementPopup() {
         className="relative w-full max-w-[95vw] sm:max-w-2xl animate-in zoom-in-95 duration-300"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Кнопка закрытия - улучшенная видимость */}
-        <button
-          onClick={handleClose}
-          className="absolute top-1 right-1 sm:-top-4 sm:-right-4 z-10 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-red-500 shadow-2xl hover:bg-red-600 transition-all hover:scale-110 active:scale-95"
-          aria-label="Close"
-        >
-          <X className="h-5 w-5 sm:h-6 sm:w-6 text-white font-bold" strokeWidth={3} />
-        </button>
-
         {/* Контент popup с облаками */}
         <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100">
           {/* SVG Облака на фоне */}

@@ -52,42 +52,42 @@ export default function SchedulePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[250px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/30">
-        <div className="absolute inset-0 flex items-center justify-center">
+      <section className="relative h-[200px] sm:h-[250px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/30">
+        <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center">
-            <h1 className="mb-4 font-serif text-5xl font-bold text-primary">{t.schedule.title}</h1>
-            <p className="text-lg text-foreground/80">{t.schedule.subtitle}</p>
+            <h1 className="mb-4 font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{t.schedule.title}</h1>
+            <p className="text-base sm:text-lg text-foreground/80">{t.schedule.subtitle}</p>
           </div>
         </div>
       </section>
 
       {/* Schedule Content */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-12 md:py-16">
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="mb-8 grid w-full max-w-md mx-auto grid-cols-4">
-            <TabsTrigger value="all">{t.schedule.filterAll}</TabsTrigger>
-            <TabsTrigger value="sermon">{t.schedule.sermons}</TabsTrigger>
-            <TabsTrigger value="class">{t.schedule.classes}</TabsTrigger>
-            <TabsTrigger value="event">{t.schedule.events}</TabsTrigger>
+          <TabsList className="mb-6 md:mb-8 grid w-full max-w-lg mx-auto grid-cols-2 sm:grid-cols-4 gap-1">
+            <TabsTrigger value="all" className="text-xs sm:text-sm">{t.schedule.filterAll}</TabsTrigger>
+            <TabsTrigger value="sermon" className="text-xs sm:text-sm">{t.schedule.sermons}</TabsTrigger>
+            <TabsTrigger value="class" className="text-xs sm:text-sm">{t.schedule.classes}</TabsTrigger>
+            <TabsTrigger value="event" className="text-xs sm:text-sm">{t.schedule.events}</TabsTrigger>
           </TabsList>
 
           {["all", "sermon", "class", "event"].map((type) => (
-            <TabsContent key={type} value={type} className="space-y-6">
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <TabsContent key={type} value={type} className="space-y-4 md:space-y-6">
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {getEventsByType(type).map((event) => (
                   <Card
                     key={event.id}
                     className="cursor-pointer overflow-hidden transition-all hover:shadow-lg"
                     onClick={() => setSelectedEvent(event)}
                   >
-                    <div className="relative h-48 w-full">
-                      <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
-                      <div className="absolute top-4 right-4">
-                        <Badge className={getTypeColor(event.type)}>{t.schedule.typeLabels[event.type as keyof typeof t.schedule.typeLabels]}</Badge>
+                    <div className="relative h-40 sm:h-48 w-full">
+                      <Image src="/богослужение.jpg" alt={event.title} fill className="object-cover" />
+                      <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                        <Badge className={`${getTypeColor(event.type)} text-xs`}>{t.schedule.typeLabels[event.type as keyof typeof t.schedule.typeLabels]}</Badge>
                       </div>
                     </div>
-                    <CardContent className="p-6">
-                      <h3 className="mb-3 font-serif text-xl font-semibold">{event.title}</h3>
+                    <CardContent className="p-4 sm:p-6">
+                      <h3 className="mb-2 sm:mb-3 font-serif text-lg sm:text-xl font-semibold">{event.title}</h3>
                       <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <CalendarIcon className="h-4 w-4" />
@@ -138,7 +138,7 @@ export default function SchedulePage() {
               <div className="space-y-6">
                 <div className="relative aspect-video w-full overflow-hidden rounded-lg">
                   <Image
-                    src={selectedEvent.image || "/placeholder.svg"}
+                    src="/богослужение.jpg"
                     alt={selectedEvent.title}
                     fill
                     className="object-cover"

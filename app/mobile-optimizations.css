@@ -1,0 +1,122 @@
+/* Mobile Optimizations for Church Website */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize touch targets for mobile */
+@media (max-width: 768px) {
+  button, 
+  [role="button"], 
+  input[type="submit"], 
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve tap targets */
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Better spacing for mobile cards */
+  .card-mobile {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Optimize modal for mobile */
+  .modal-mobile {
+    margin: 0.5rem;
+    max-height: 95vh;
+    border-radius: 0.75rem;
+  }
+  
+  /* Better gallery spacing */
+  .gallery-mobile {
+    gap: 0.75rem;
+  }
+  
+  /* Optimize hero text for small screens */
+  .hero-text-mobile {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+  
+  /* Better button spacing */
+  .button-group-mobile {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .button-group-mobile button {
+    width: 100%;
+  }
+}
+
+/* Optimize for very small screens */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Smaller hero height for very small screens */
+  .hero-mobile-small {
+    height: 250px;
+  }
+  
+  /* Compact navigation */
+  .nav-mobile {
+    padding: 0.5rem;
+  }
+  
+  /* Better modal sizing */
+  .modal-mobile-small {
+    margin: 0.25rem;
+    max-height: 98vh;
+  }
+}
+
+/* Performance optimizations */
+.image-optimize {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.smooth-transform {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .modal-mobile {
+    background-color: rgb(15 23 42);
+    border: 1px solid rgb(51 65 85);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button, 
+  .card {
+    border: 2px solid;
+  }
+}

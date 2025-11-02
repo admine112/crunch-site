@@ -29,20 +29,20 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[300px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/30">
-        <div className="absolute inset-0 flex items-center justify-center">
+      <section className="relative h-[250px] sm:h-[300px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/30">
+        <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center">
-            <h1 className="mb-4 font-serif text-5xl font-bold text-primary">{t.about.title}</h1>
-            <p className="text-xl text-foreground/80">{t.home.tagline}</p>
+            <h1 className="mb-4 font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{t.about.title}</h1>
+            <p className="text-lg sm:text-xl text-foreground/80">{t.home.tagline}</p>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-8 flex justify-center">
-            <div className="relative h-32 w-32">
+          <div className="mb-6 md:mb-8 flex justify-center">
+            <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-j0ENYkkw11KcKw5pnQQH7jeY2rIARR.jpg"
                 alt="Church Logo"
@@ -51,21 +51,21 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <h2 className="mb-6 font-serif text-3xl font-bold text-primary">
+          <h2 className="mb-4 md:mb-6 font-serif text-2xl sm:text-3xl font-bold text-primary">
             {locale === "uk" ? "Наша місія" : locale === "nl" ? "Onze Missie" : "Our Mission"}
           </h2>
-          <p className="mb-4 text-lg leading-relaxed text-muted-foreground">{t.about.mission}</p>
-          <p className="text-lg leading-relaxed text-muted-foreground">
+          <p className="mb-4 text-base sm:text-lg leading-relaxed text-muted-foreground">{t.about.mission}</p>
+          <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
             {t.about.missionDescription}
           </p>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="bg-secondary/30 py-16">
+      <section className="bg-secondary/30 py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center font-serif text-3xl font-bold text-primary">{t.about.coreValuesTitle}</h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          <h2 className="mb-8 md:mb-12 text-center font-serif text-2xl sm:text-3xl font-bold text-primary">{t.about.coreValuesTitle}</h2>
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
@@ -131,15 +131,15 @@ export default function AboutPage() {
       </section>
 
       {/* Pastors Section */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="mb-12 text-center font-serif text-3xl font-bold text-primary">{t.about.pastorsTitle}</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <h2 className="mb-8 md:mb-12 text-center font-serif text-2xl sm:text-3xl font-bold text-primary">{t.about.pastorsTitle}</h2>
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {pastors.map((pastor, index) => {
             // Используем реальные фото пасторов
             const pastorImages = [
               '/pastor1.png',
-              '/pastor2.png',
               '/pastor-3-woman.png',
+              '/pastor2.png',
               '/pastor-4-woman.png'
             ]
             return (
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 className="cursor-pointer overflow-hidden transition-all hover:shadow-lg card-hover"
                 onClick={() => setSelectedPastor(pastor)}
               >
-                <div className="relative h-64 w-full bg-gradient-to-br from-primary/10 to-secondary/20">
+                <div className="relative h-48 sm:h-56 md:h-64 w-full bg-gradient-to-br from-primary/10 to-secondary/20">
                   <Image 
                     src={pastorImages[index] || pastor.image || "/placeholder.svg"} 
                     alt={pastor.name} 
@@ -156,10 +156,10 @@ export default function AboutPage() {
                     className="object-cover" 
                   />
                 </div>
-                <CardContent className="p-6 text-center">
-                  <h3 className="mb-1 font-serif text-xl font-semibold">{pastor.name}</h3>
+                <CardContent className="p-4 sm:p-6 text-center">
+                  <h3 className="mb-1 font-serif text-lg sm:text-xl font-semibold">{pastor.name}</h3>
                   <p className="text-sm text-primary">{pastor.role}</p>
-                  <Button variant="ghost" size="sm" className="mt-4 button-hover">
+                  <Button variant="ghost" size="sm" className="mt-3 sm:mt-4 button-hover w-full sm:w-auto">
                     {t.about.learnMore}
                   </Button>
                 </CardContent>
@@ -170,19 +170,21 @@ export default function AboutPage() {
       </section>
 
       {/* Recent Events Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 py-16">
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center font-serif text-3xl font-bold text-primary">
+          <h2 className="mb-8 md:mb-12 text-center font-serif text-2xl sm:text-3xl font-bold text-primary">
             {locale === "uk" ? "Останні події" : locale === "nl" ? "Recente gebeurtenissen" : "Recent Events"}
           </h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 md:grid-cols-3">
             <Card className="overflow-hidden card-hover">
-              <div className="relative h-48 w-full bg-gradient-to-br from-primary/20 to-secondary/30">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="h-16 w-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
+              <div className="relative h-48 w-full">
+                <Image
+                  src="/church-sermon-light-rays.jpg"
+                  alt="Sunday Service"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-2 text-xs text-primary font-semibold">
@@ -198,12 +200,14 @@ export default function AboutPage() {
             </Card>
 
             <Card className="overflow-hidden card-hover">
-              <div className="relative h-48 w-full bg-gradient-to-br from-primary/20 to-secondary/30">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="h-16 w-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
+              <div className="relative h-48 w-full">
+                <Image
+                  src="/church-faith-walking.jpg"
+                  alt="Youth Gathering"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-2 text-xs text-primary font-semibold">
@@ -219,12 +223,14 @@ export default function AboutPage() {
             </Card>
 
             <Card className="overflow-hidden card-hover">
-              <div className="relative h-48 w-full bg-gradient-to-br from-primary/20 to-secondary/30">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="h-16 w-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
+              <div className="relative h-48 w-full">
+                <Image
+                  src="/dramatic-sunrise-light-rays-through-clouds-golden-.jpg"
+                  alt="Charity Event"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-2 text-xs text-primary font-semibold">
