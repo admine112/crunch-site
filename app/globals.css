@@ -200,16 +200,12 @@
   
   html {
     scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%;
   }
   
   body {
     @apply bg-background text-foreground;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
   
@@ -261,13 +257,6 @@
     
     img {
       page-break-inside: avoid;
-    }
-    
-    h2,
-    h3,
-    p {
-      orphans: 3;
-      widows: 3;
     }
     
     h2,
