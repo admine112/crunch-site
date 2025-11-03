@@ -29,7 +29,7 @@ export function LanguageSwitcher() {
         {locales.map((loc) => (
           <DropdownMenuItem 
             key={loc} 
-            onClick={() => handleLocaleChange(loc)} 
+            onSelect={() => handleLocaleChange(loc)} 
             className={`cursor-pointer touch-target ${locale === loc ? "bg-accent font-semibold" : ""}`}
           >
             {localeNames[loc]}
