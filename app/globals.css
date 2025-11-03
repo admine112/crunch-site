@@ -44,19 +44,19 @@
 
 :root {
   --background: #f5f1e6;
-  --foreground: #4a3f35;
+  --foreground: #1a1614; /* Более тёмный текст */
   --card: #fffcf5;
-  --card-foreground: #4a3f35;
+  --card-foreground: #1a1614; /* Более тёмный текст */
   --popover: #fffcf5;
-  --popover-foreground: #4a3f35;
+  --popover-foreground: #1a1614;
   --primary: #a67c52;
   --primary-foreground: #ffffff;
   --secondary: #e2d8c3;
-  --secondary-foreground: #5c4d3f;
+  --secondary-foreground: #2a2420; /* Более тёмный */
   --muted: #ece5d8;
-  --muted-foreground: #7d6b56;
+  --muted-foreground: #4a3f35; /* Более тёмный */
   --accent: #d4c8aa;
-  --accent-foreground: #4a3f35;
+  --accent-foreground: #1a1614;
   --destructive: #b54a35;
   --destructive-foreground: #ffffff;
   --border: #dbd0ba;
