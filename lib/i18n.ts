@@ -76,6 +76,12 @@ export type Translations = {
       location: string
       speaker: string
     }>
+    viewDetails: string
+    modalSpeaker: string
+    modalAboutSermon: string
+    modalJoinButton: string
+    modalCloseButton: string
+    modalAboutEvent: string
     sermonTitles: {
       lightInDarkness: string
       walkingInFaith: string
@@ -252,6 +258,12 @@ export const translations: Record<Locale, Translations> = {
           speaker: "Пастор Іван"
         }
       ],
+      viewDetails: "Детальніше →",
+      modalSpeaker: "Спікер:",
+      modalAboutSermon: "Про що буде проповідь:",
+      modalJoinButton: "Приєднатися",
+      modalCloseButton: "Закрити",
+      modalAboutEvent: "Опис події:",
       sermonTitles: {
         lightInDarkness: "Світло у темряві",
         walkingInFaith: "Ходіння у вірі",
@@ -592,6 +604,12 @@ export const translations: Record<Locale, Translations> = {
           speaker: "Pastor John"
         }
       ],
+      viewDetails: "View Details →",
+      modalSpeaker: "Speaker:",
+      modalAboutSermon: "About the sermon:",
+      modalJoinButton: "Join",
+      modalCloseButton: "Close",
+      modalAboutEvent: "Event description:",
       sermonTitles: {
         lightInDarkness: "Light in the Darkness",
         walkingInFaith: "Walking in Faith",
@@ -932,6 +950,12 @@ export const translations: Record<Locale, Translations> = {
           speaker: "Dominee Jan"
         }
       ],
+      viewDetails: "Details bekijken →",
+      modalSpeaker: "Spreker:",
+      modalAboutSermon: "Over de preek:",
+      modalJoinButton: "Deelnemen",
+      modalCloseButton: "Sluiten",
+      modalAboutEvent: "Gebeurtenisbeschrijving:",
       sermonTitles: {
         lightInDarkness: "Licht in de duisternis",
         walkingInFaith: "Wandelen in geloof",

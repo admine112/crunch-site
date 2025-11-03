@@ -187,7 +187,7 @@ export default function HomePage() {
                     className="mt-3 sm:mt-4 text-primary w-full sm:w-auto"
                     onClick={() => setSelectedSermon(sermon)}
                   >
-                    Детальніше →
+                    {t.home.viewDetails}
                   </Button>
                 </CardContent>
               </Card>
@@ -380,14 +380,14 @@ export default function HomePage() {
                   </div>
                   
                   <div className="pt-4 border-t">
-                    <h4 className="font-semibold mb-2">Спікер:</h4>
+                    <h4 className="font-semibold mb-2">{t.home.modalSpeaker}</h4>
                     <p className="text-sm text-primary font-medium">
                       {selectedSermon.speaker}
                     </p>
                   </div>
                   
                   <div className="pt-4 border-t">
-                    <h4 className="font-semibold mb-2">Про що буде проповідь:</h4>
+                    <h4 className="font-semibold mb-2">{t.home.modalAboutSermon}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {selectedSermon.description}
                     </p>
@@ -396,10 +396,10 @@ export default function HomePage() {
                 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <Button className="flex-1 w-full">
-                    Приєднатися
+                    {t.home.modalJoinButton}
                   </Button>
                   <Button variant="outline" onClick={() => setSelectedSermon(null)} className="w-full sm:w-auto">
-                    Закрити
+                    {t.home.modalCloseButton}
                   </Button>
                 </div>
               </div>
@@ -449,14 +449,14 @@ export default function HomePage() {
                   </div>
                   
                   <div className="pt-4 border-t">
-                    <h4 className="font-semibold mb-2">Опис події:</h4>
+                    <h4 className="font-semibold mb-2">{t.home.modalAboutEvent}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {selectedEvent.description}
                     </p>
                   </div>
                   
                   <div className="pt-4 border-t">
-                    <h4 className="font-semibold mb-2">Спікер:</h4>
+                    <h4 className="font-semibold mb-2">{t.home.modalSpeaker}</h4>
                     <p className="text-sm text-primary font-medium">
                       {selectedEvent.speaker}
                     </p>
@@ -465,10 +465,10 @@ export default function HomePage() {
                 
                 <div className="mt-6 flex gap-3">
                   <Button className="flex-1">
-                    Приєднатися
+                    {t.home.modalJoinButton}
                   </Button>
                   <Button variant="outline" onClick={() => setSelectedEvent(null)}>
-                    Закрити
+                    {t.home.modalCloseButton}
                   </Button>
                 </div>
               </div>
