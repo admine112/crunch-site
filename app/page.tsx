@@ -201,10 +201,10 @@ export default function HomePage() {
         <h3 className="mb-6 md:mb-8 text-center font-serif text-2xl sm:text-3xl font-bold text-primary">{t.home.eventsTitle}</h3>
         <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
           {/* Calendar View */}
-          <Card className="p-4 sm:p-6 order-2 lg:order-1 shadow-xl border-0 bg-gradient-to-br from-sky-100 via-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700">
+          <Card className="p-4 sm:p-6 order-2 lg:order-1 shadow-lg border-2 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700">
             <div className="mb-6 text-center">
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-white bg-gradient-to-r from-blue-500 to-indigo-500 py-3 px-4 rounded-lg shadow-md mb-3">{t.home.eventsCalendarTitle}</h4>
-              <div className="text-lg font-semibold text-gray-700 dark:text-gray-300">{t.home.calendarMonth}</div>
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-primary mb-2">{t.home.eventsCalendarTitle}</h4>
+              <div className="text-lg font-semibold text-muted-foreground">{t.home.calendarMonth}</div>
             </div>
             
             <div className="grid grid-cols-7 gap-1 mb-4">
@@ -242,28 +242,26 @@ export default function HomePage() {
           </Card>
 
           {/* Upcoming Events List */}
-          <Card className="p-4 sm:p-6 order-1 lg:order-2 bg-gradient-to-br from-sky-100 via-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700 border-0 shadow-xl">
+          <Card className="p-4 sm:p-6 order-1 lg:order-2 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700">
             <div className="mb-6 text-center">
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-white bg-gradient-to-r from-blue-500 to-indigo-500 py-3 px-4 rounded-lg shadow-md mb-2">{t.home.upcomingEventsTitle}</h4>
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-primary mb-2">{t.home.upcomingEventsTitle}</h4>
             </div>
             <div className="space-y-4">
               {upcomingEvents.map((event, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-600 shadow-lg hover:shadow-xl transition-all cursor-pointer border-l-4 border-blue-400 hover:scale-[1.02]"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-600 shadow-md hover:shadow-lg transition-all cursor-pointer border-l-4 border-primary"
                   onClick={() => setSelectedEvent(event)}
                 >
-                  <div className="flex flex-col items-center justify-center min-w-[60px] bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-lg p-3 shadow-md">
-                    <span className="text-xs font-semibold uppercase">{event.date.split(" ")[0]}</span>
-                    <span className="text-2xl font-bold">{event.date.split(" ")[1]}</span>
+                  <div className="flex flex-col items-center justify-center min-w-[60px] bg-primary text-primary-foreground rounded-lg p-3">
+                    <span className="text-xs font-semibold">{event.date.split(" ")[0]}</span>
+                    <span className="text-xl font-bold">{event.date.split(" ")[1]}</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h5 className="font-bold text-lg text-gray-800 dark:text-white mb-1">{event.title}</h5>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-2 flex items-center gap-1">
-                      <span className="text-blue-500">🕐</span> {event.time}
-                    </p>
-                    <div className="flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 font-medium">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                    <h5 className="font-bold text-base text-gray-800 dark:text-white mb-1">{event.title}</h5>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{event.time}</p>
+                    <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       <span>{t.home.learnMore}</span>
                     </div>
                   </div>

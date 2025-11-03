@@ -43,89 +43,85 @@
 }
 
 :root {
-  /* Мягкая элегантная палитра */
-  --background: #f5f7fa; /* Очень светлый голубовато-серый */
-  --foreground: #2c3e50; /* Тёмно-синий текст */
-  --card: #ffffff; /* Белые карточки */
-  --card-foreground: #2c3e50;
-  --popover: #ffffff;
-  --popover-foreground: #2c3e50;
-  --primary: #3498db; /* Мягкий голубой */
+  --background: #f5f1e6;
+  --foreground: #4a3f35;
+  --card: #fffcf5;
+  --card-foreground: #4a3f35;
+  --popover: #fffcf5;
+  --popover-foreground: #4a3f35;
+  --primary: #a67c52;
   --primary-foreground: #ffffff;
-  --secondary: #ecf0f1; /* Светло-серый */
-  --secondary-foreground: #2c3e50;
-  --muted: #ecf0f1;
-  --muted-foreground: #7f8c8d;
-  --accent: #3498db;
-  --accent-foreground: #ffffff;
-  --destructive: #e74c3c;
+  --secondary: #e2d8c3;
+  --secondary-foreground: #5c4d3f;
+  --muted: #ece5d8;
+  --muted-foreground: #7d6b56;
+  --accent: #d4c8aa;
+  --accent-foreground: #4a3f35;
+  --destructive: #b54a35;
   --destructive-foreground: #ffffff;
-  --border: #dfe6e9;
-  --input: #dfe6e9;
-  --ring: #3498db;
-  --gold: #f39c12; /* Тёплый золотой */
-  --chart-1: #3498db;
-  --chart-2: #2980b9;
-  --chart-3: #1abc9c;
-  --chart-4: #16a085;
-  --chart-5: #27ae60;
-  --radius: 0.5rem;
-  --sidebar: #ecf0f1;
-  --sidebar-foreground: #2c3e50;
-  --sidebar-primary: #3498db;
+  --border: #dbd0ba;
+  --input: #dbd0ba;
+  --ring: #a67c52;
+  --chart-1: #a67c52;
+  --chart-2: #8d6e4c;
+  --chart-3: #735a3a;
+  --chart-4: #b3906f;
+  --chart-5: #c0a080;
+  --radius: 0.25rem;
+  --sidebar: #ece5d8;
+  --sidebar-foreground: #4a3f35;
+  --sidebar-primary: #a67c52;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #bdc3c7;
-  --sidebar-accent-foreground: #2c3e50;
-  --sidebar-border: #dfe6e9;
-  --sidebar-ring: #3498db;
+  --sidebar-accent: #d4c8aa;
+  --sidebar-accent-foreground: #4a3f35;
+  --sidebar-border: #dbd0ba;
+  --sidebar-ring: #a67c52;
   --shadow-x: 0px;
-  --shadow-y: 2px;
-  --shadow-blur: 8px;
+  --shadow-y: 1px;
+  --shadow-blur: 2px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.08;
-  --shadow-color: #2c3e50;
+  --shadow-opacity: 0.05;
+  --shadow-color: #000000;
 }
 
 .dark {
-  /* Тёмная тема с синим акцентом */
-  --background: #212529; /* Тёмный фон */
-  --foreground: #F8F9FA; /* Светлый текст */
-  --card: #343A40; /* Тёмные карточки */
-  --card-foreground: #F8F9FA;
-  --popover: #343A40;
-  --popover-foreground: #F8F9FA;
-  --primary: #0D6EFD; /* Синий акцент */
-  --primary-foreground: #FFFFFF;
-  --secondary: #6C757D; /* Серый */
-  --secondary-foreground: #F8F9FA;
-  --muted: #495057; /* Средне-серый */
-  --muted-foreground: #ADB5BD;
-  --accent: #0D6EFD;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC3545;
-  --destructive-foreground: #FFFFFF;
-  --border: #495057;
-  --input: #495057;
-  --ring: #0D6EFD;
-  --gold: #D4AF37; /* Золотой */
-  --chart-1: #0D6EFD;
-  --chart-2: #0A58CA;
-  --chart-3: #084298;
-  --chart-4: #6C757D;
-  --chart-5: #ADB5BD;
-  --sidebar: #212529;
-  --sidebar-foreground: #F8F9FA;
-  --sidebar-primary: #0D6EFD;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #495057;
-  --sidebar-accent-foreground: #F8F9FA;
-  --sidebar-border: #495057;
-  --sidebar-ring: #0D6EFD;
+  --background: #2d2621;
+  --foreground: #ece5d8;
+  --card: #3a322c;
+  --card-foreground: #ece5d8;
+  --popover: #3a322c;
+  --popover-foreground: #ece5d8;
+  --primary: #c0a080;
+  --primary-foreground: #2d2621;
+  --secondary: #4a4039;
+  --secondary-foreground: #ece5d8;
+  --muted: #3a322c;
+  --muted-foreground: #c5bcac;
+  --accent: #59493e;
+  --accent-foreground: #ece5d8;
+  --destructive: #b54a35;
+  --destructive-foreground: #ffffff;
+  --border: #4a4039;
+  --input: #4a4039;
+  --ring: #c0a080;
+  --chart-1: #c0a080;
+  --chart-2: #b3906f;
+  --chart-3: #a67c52;
+  --chart-4: #8d6e4c;
+  --chart-5: #735a3a;
+  --sidebar: #2d2621;
+  --sidebar-foreground: #ece5d8;
+  --sidebar-primary: #c0a080;
+  --sidebar-primary-foreground: #2d2621;
+  --sidebar-accent: #59493e;
+  --sidebar-accent-foreground: #ece5d8;
+  --sidebar-border: #4a4039;
+  --sidebar-ring: #c0a080;
   --shadow-x: 0px;
-  --shadow-y: 2px;
-  --shadow-blur: 8px;
+  --shadow-y: 1px;
+  --shadow-blur: 2px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.2;
+  --shadow-opacity: 0.05;
   --shadow-color: #000000;
 }
 
@@ -204,46 +200,18 @@
   
   html {
     scroll-behavior: smooth;
-    font-size: 16px;
   }
   
   body {
     @apply bg-background text-foreground;
-    line-height: 1.7;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    /* Адаптивный базовый размер текста */
-    font-size: clamp(18px, 1.125vw, 28px);
   }
   
-  /* ✅ Улучшенная типографика с золотыми заголовками */
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.3;
-    font-weight: 700;
-    color: #f39c12; /* Тёплый золотой */
-    letter-spacing: -0.01em;
-  }
-  
-  h1 {
-    font-size: clamp(2rem, 4vw, 4rem);
-  }
-  
-  h2 {
-    font-size: clamp(1.75rem, 3vw, 3rem);
-  }
-  
-  h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  }
-  
-  h4 {
-    font-size: clamp(1.25rem, 2vw, 1.875rem);
-  }
-  
-  p {
-    color: #2c3e50; /* Тёмно-синий */
-    font-size: clamp(1rem, 1.125vw, 1.5rem);
-    line-height: 1.7;
+    line-height: 1.2;
+    font-weight: 600;
   }
   
   /* ✅ Доступность для пользователей с нарушениями моторики */
