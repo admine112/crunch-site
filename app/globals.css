@@ -43,47 +43,47 @@
 }
 
 :root {
-  /* Контрастная палитра с синим акцентом */
-  --background: #F8F9FA; /* Светло-серый фон */
-  --foreground: #212529; /* Тёмный текст */
-  --card: #FFFFFF; /* Белые карточки */
-  --card-foreground: #212529;
-  --popover: #FFFFFF;
-  --popover-foreground: #212529;
-  --primary: #0D6EFD; /* Синий акцент */
-  --primary-foreground: #FFFFFF;
-  --secondary: #6C757D; /* Серый */
-  --secondary-foreground: #FFFFFF;
-  --muted: #E9ECEF; /* Светло-серый */
-  --muted-foreground: #6C757D;
-  --accent: #0D6EFD; /* Синий акцент */
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC3545; /* Красный */
-  --destructive-foreground: #FFFFFF;
-  --border: #DEE2E6; /* Светлая граница */
-  --input: #DEE2E6;
-  --ring: #0D6EFD;
-  --gold: #D4AF37; /* Золотой для заголовков */
-  --chart-1: #0D6EFD;
-  --chart-2: #0A58CA;
-  --chart-3: #084298;
-  --chart-4: #6C757D;
-  --chart-5: #ADB5BD;
+  /* Мягкая элегантная палитра */
+  --background: #f5f7fa; /* Очень светлый голубовато-серый */
+  --foreground: #2c3e50; /* Тёмно-синий текст */
+  --card: #ffffff; /* Белые карточки */
+  --card-foreground: #2c3e50;
+  --popover: #ffffff;
+  --popover-foreground: #2c3e50;
+  --primary: #3498db; /* Мягкий голубой */
+  --primary-foreground: #ffffff;
+  --secondary: #ecf0f1; /* Светло-серый */
+  --secondary-foreground: #2c3e50;
+  --muted: #ecf0f1;
+  --muted-foreground: #7f8c8d;
+  --accent: #3498db;
+  --accent-foreground: #ffffff;
+  --destructive: #e74c3c;
+  --destructive-foreground: #ffffff;
+  --border: #dfe6e9;
+  --input: #dfe6e9;
+  --ring: #3498db;
+  --gold: #f39c12; /* Тёплый золотой */
+  --chart-1: #3498db;
+  --chart-2: #2980b9;
+  --chart-3: #1abc9c;
+  --chart-4: #16a085;
+  --chart-5: #27ae60;
   --radius: 0.5rem;
-  --sidebar: #F8F9FA;
-  --sidebar-foreground: #212529;
-  --sidebar-primary: #0D6EFD;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #E9ECEF;
-  --sidebar-accent-foreground: #212529;
-  --sidebar-border: #DEE2E6;
-  --sidebar-ring: #0D6EFD;
+  --sidebar: #ecf0f1;
+  --sidebar-foreground: #2c3e50;
+  --sidebar-primary: #3498db;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #bdc3c7;
+  --sidebar-accent-foreground: #2c3e50;
+  --sidebar-border: #dfe6e9;
+  --sidebar-ring: #3498db;
   --shadow-x: 0px;
   --shadow-y: 2px;
   --shadow-blur: 8px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.1;
-  --shadow-color: #000000;
+  --shadow-opacity: 0.08;
+  --shadow-color: #2c3e50;
 }
 
 .dark {
@@ -220,30 +220,30 @@
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
     font-weight: 700;
-    color: rgb(212 175 55); /* Золотой */
-    letter-spacing: -0.02em;
+    color: #f39c12; /* Тёплый золотой */
+    letter-spacing: -0.01em;
   }
   
   h1 {
-    font-size: clamp(2rem, 4vw, 4.5rem);
+    font-size: clamp(2rem, 4vw, 4rem);
   }
   
   h2 {
-    font-size: clamp(1.75rem, 3.5vw, 3.5rem);
+    font-size: clamp(1.75rem, 3vw, 3rem);
   }
   
   h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   }
   
   h4 {
-    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-size: clamp(1.25rem, 2vw, 1.875rem);
   }
   
   p {
-    color: rgb(33 37 41); /* Тёмно-серый */
-    font-size: clamp(1rem, 1.25vw, 1.75rem);
-    line-height: 1.8;
+    color: #2c3e50; /* Тёмно-синий */
+    font-size: clamp(1rem, 1.125vw, 1.5rem);
+    line-height: 1.7;
   }
   
   /* ✅ Доступность для пользователей с нарушениями моторики */
@@ -298,15 +298,15 @@
   
   /* ✅ Утилитные классы для дизайна */
   .text-gold {
-    color: rgb(212 175 55) !important;
+    color: #f39c12 !important;
   }
   
   .bg-gold {
-    background-color: rgb(212 175 55) !important;
+    background-color: #f39c12 !important;
   }
   
   .border-gold {
-    border-color: rgb(212 175 55) !important;
+    border-color: #f39c12 !important;
   }
   
   /* Улучшенные карточки с тенью */
