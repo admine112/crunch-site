@@ -43,6 +43,7 @@ export type Translations = {
     sermons: string
     events: string
     contact: string
+    submitRequest: string
   }
   home: {
     hero: string
@@ -65,6 +66,16 @@ export type Translations = {
     upcomingEventsTitle: string
     watchSermon: string
     supportMinistry: string
+    eventsCalendarTitle: string
+    upcomingEvents: Array<{
+      id: number
+      date: string
+      title: string
+      time: string
+      description: string
+      location: string
+      speaker: string
+    }>
     sermonTitles: {
       lightInDarkness: string
       walkingInFaith: string
@@ -179,6 +190,7 @@ export const translations: Record<Locale, Translations> = {
       sermons: "Богослужіння",
       events: "Події",
       contact: "Контакти",
+      submitRequest: "Залишити заявку",
     },
     home: {
       tagline: "Де віра зустрічає майбутнє",
@@ -201,6 +213,45 @@ export const translations: Record<Locale, Translations> = {
       upcomingEventsTitle: "Найближчі події",
       watchSermon: "Переглянути проповідь →",
       supportMinistry: "Підтримати служіння",
+      eventsCalendarTitle: "Події",
+      upcomingEvents: [
+        {
+          id: 1,
+          date: "Лис 3",
+          title: "Недільне богослужіння",
+          time: "10:00",
+          description: "Приєднуйтесь до нас на недільне богослужіння з проповіддю та спільним поклонінням.",
+          location: "Головний зал церкви",
+          speaker: "Пастор Іван"
+        },
+        {
+          id: 2,
+          date: "Лис 5",
+          title: "Вивчення Біблії",
+          time: "19:00",
+          description: "Глибоке вивчення Святого Письма та обговорення в малих групах.",
+          location: "Кімната для занять",
+          speaker: "Пастор Марія"
+        },
+        {
+          id: 3,
+          date: "Лис 10",
+          title: "Молодіжна зустріч",
+          time: "18:00",
+          description: "Час спілкування, ігор та духовного зростання для молоді.",
+          location: "Молодіжний зал",
+          speaker: "Пастор Олексій"
+        },
+        {
+          id: 4,
+          date: "Лис 17",
+          title: "Ніч молитви",
+          time: "19:30",
+          description: "Особливий час молитви та поклоніння для всієї громади.",
+          location: "Головний зал церкви",
+          speaker: "Пастор Іван"
+        }
+      ],
       sermonTitles: {
         lightInDarkness: "Світло у темряві",
         walkingInFaith: "Ходіння у вірі",
@@ -479,6 +530,7 @@ export const translations: Record<Locale, Translations> = {
       sermons: "Sermons",
       events: "Events",
       contact: "Contact",
+      submitRequest: "Submit Request",
     },
     home: {
       tagline: "Where faith meets future",
@@ -501,6 +553,45 @@ export const translations: Record<Locale, Translations> = {
       upcomingEventsTitle: "Upcoming Events",
       watchSermon: "Watch Sermon →",
       supportMinistry: "Support Our Ministry",
+      eventsCalendarTitle: "Events",
+      upcomingEvents: [
+        {
+          id: 1,
+          date: "Nov 3",
+          title: "Sunday Service",
+          time: "10:00",
+          description: "Join us for Sunday service with sermon and worship.",
+          location: "Main Church Hall",
+          speaker: "Pastor John"
+        },
+        {
+          id: 2,
+          date: "Nov 5",
+          title: "Bible Study",
+          time: "19:00",
+          description: "Deep study of Scripture and discussion in small groups.",
+          location: "Study Room",
+          speaker: "Pastor Mary"
+        },
+        {
+          id: 3,
+          date: "Nov 10",
+          title: "Youth Meeting",
+          time: "18:00",
+          description: "Time of fellowship, games and spiritual growth for youth.",
+          location: "Youth Hall",
+          speaker: "Pastor Alex"
+        },
+        {
+          id: 4,
+          date: "Nov 17",
+          title: "Prayer Night",
+          time: "19:30",
+          description: "Special time of prayer and worship for the whole community.",
+          location: "Main Church Hall",
+          speaker: "Pastor John"
+        }
+      ],
       sermonTitles: {
         lightInDarkness: "Light in the Darkness",
         walkingInFaith: "Walking in Faith",
@@ -779,6 +870,7 @@ export const translations: Record<Locale, Translations> = {
       sermons: "Eredienst",
       events: "Evenementen",
       contact: "Contact",
+      submitRequest: "Aanvraag indienen",
     },
     home: {
       tagline: "Waar geloof de toekomst ontmoet",
@@ -801,6 +893,45 @@ export const translations: Record<Locale, Translations> = {
       upcomingEventsTitle: "Aankomende evenementen",
       watchSermon: "Bekijk preek →",
       supportMinistry: "Ondersteun ons ministerie",
+      eventsCalendarTitle: "Evenementen",
+      upcomingEvents: [
+        {
+          id: 1,
+          date: "Nov 3",
+          title: "Zondagdienst",
+          time: "10:00",
+          description: "Doe mee met onze zondagdienst met preek en aanbidding.",
+          location: "Hoofdzaal",
+          speaker: "Dominee Jan"
+        },
+        {
+          id: 2,
+          date: "Nov 5",
+          title: "Bijbelstudie",
+          time: "19:00",
+          description: "Diepgaande studie van de Schrift en discussie in kleine groepen.",
+          location: "Studiezaal",
+          speaker: "Dominee Maria"
+        },
+        {
+          id: 3,
+          date: "Nov 10",
+          title: "Jeugdbijeenkomst",
+          time: "18:00",
+          description: "Tijd van gemeenschap, spellen en spirituele groei voor jongeren.",
+          location: "Jeugdzaal",
+          speaker: "Dominee Alex"
+        },
+        {
+          id: 4,
+          date: "Nov 17",
+          title: "Gebedsnacht",
+          time: "19:30",
+          description: "Speciale tijd van gebed en aanbidding voor de hele gemeenschap.",
+          location: "Hoofdzaal",
+          speaker: "Dominee Jan"
+        }
+      ],
       sermonTitles: {
         lightInDarkness: "Licht in de duisternis",
         walkingInFaith: "Wandelen in geloof",

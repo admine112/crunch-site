@@ -94,48 +94,15 @@ export default function HomePage() {
     },
   ]
 
-  const upcomingEvents = [
-    { 
-      id: 1,
-      date: "Nov 3", 
-      title: "Недільне богослужіння", 
-      time: "10:00", 
-      description: "Приєднуйтесь до нас на недільне богослужіння з проповіддю та спільним поклонінням.",
-      location: "Головний зал церкви",
-      speaker: "Пастор Іван",
-      image: "/church-sermon-light-rays.jpg"
-    },
-    { 
-      id: 2,
-      date: "Nov 5", 
-      title: "Вивчення Біблії", 
-      time: "19:00", 
-      description: "Глибоке вивчення Святого Письма та обговорення в малих групах.",
-      location: "Кімната для занять",
-      speaker: "Пастор Марія",
-      image: "/church-faith-walking.jpg"
-    },
-    { 
-      id: 3,
-      date: "Nov 10", 
-      title: "Молодіжна зустріч", 
-      time: "18:00", 
-      description: "Час спілкування, ігор та духовного зростання для молоді.",
-      location: "Молодіжний зал",
-      speaker: "Пастор Олексій",
-      image: "/dramatic-sunrise-light-rays-through-clouds-golden-.jpg"
-    },
-    { 
-      id: 4,
-      date: "Nov 17", 
-      title: "Ніч молитви", 
-      time: "19:30", 
-      description: "Особливий час молитви та поклоніння для всієї громади.",
-      location: "Головний зал церкви",
-      speaker: "Пастор Іван",
-      image: "/church-sermon-light.jpg"
-    },
-  ]
+  const upcomingEvents = t.home.upcomingEvents.map((event, index) => ({
+    ...event,
+    image: [
+      "/church-sermon-light-rays.jpg",
+      "/church-faith-walking.jpg",
+      "/dramatic-sunrise-light-rays-through-clouds-golden-.jpg",
+      "/church-sermon-light.jpg"
+    ][index]
+  }))
 
   if (!isContentVisible) {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>
@@ -189,7 +156,7 @@ export default function HomePage() {
                 <Link href="/about">{t.home.learnMore}</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-                <Link href="/contact">{t.home.joinButton}</Link>
+                <Link href="/contact">{t.nav.submitRequest}</Link>
               </Button>
             </div>
           </div>
@@ -236,8 +203,8 @@ export default function HomePage() {
           {/* Calendar View */}
           <Card className="p-4 sm:p-6 order-2 lg:order-1 shadow-lg border-2 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700">
             <div className="mb-6 text-center">
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-primary mb-2">Події</h4>
-              <div className="text-lg font-semibold text-muted-foreground">Листопад 2025</div>
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-primary mb-2">{t.home.eventsCalendarTitle}</h4>
+              <div className="text-lg font-semibold text-muted-foreground">{t.home.calendarMonth}</div>
             </div>
             
             <div className="grid grid-cols-7 gap-1 mb-4">
@@ -277,7 +244,7 @@ export default function HomePage() {
           {/* Upcoming Events List */}
           <Card className="p-4 sm:p-6 order-1 lg:order-2 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700">
             <div className="mb-6 text-center">
-              <h4 className="font-serif text-xl sm:text-2xl font-bold text-primary mb-2">Майбутні події</h4>
+              <h4 className="font-serif text-xl sm:text-2xl font-bold text-primary mb-2">{t.home.upcomingEventsTitle}</h4>
             </div>
             <div className="space-y-4">
               {upcomingEvents.map((event, index) => (
@@ -295,7 +262,7 @@ export default function HomePage() {
                     <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{event.time}</p>
                     <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      <span>Детальніше →</span>
+                      <span>{t.home.learnMore}</span>
                     </div>
                   </div>
                 </div>
