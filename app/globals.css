@@ -43,85 +43,89 @@
 }
 
 :root {
-  --background: #f5f1e6;
-  --foreground: #4a3f35;
-  --card: #fffcf5;
-  --card-foreground: #4a3f35;
-  --popover: #fffcf5;
-  --popover-foreground: #4a3f35;
-  --primary: #a67c52;
-  --primary-foreground: #ffffff;
-  --secondary: #e2d8c3;
-  --secondary-foreground: #5c4d3f;
-  --muted: #ece5d8;
-  --muted-foreground: #7d6b56;
-  --accent: #d4c8aa;
-  --accent-foreground: #4a3f35;
-  --destructive: #b54a35;
-  --destructive-foreground: #ffffff;
-  --border: #dbd0ba;
-  --input: #dbd0ba;
-  --ring: #a67c52;
-  --chart-1: #a67c52;
-  --chart-2: #8d6e4c;
-  --chart-3: #735a3a;
-  --chart-4: #b3906f;
-  --chart-5: #c0a080;
-  --radius: 0.25rem;
-  --sidebar: #ece5d8;
-  --sidebar-foreground: #4a3f35;
-  --sidebar-primary: #a67c52;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #d4c8aa;
-  --sidebar-accent-foreground: #4a3f35;
-  --sidebar-border: #dbd0ba;
-  --sidebar-ring: #a67c52;
+  /* Контрастная палитра с синим акцентом */
+  --background: #F8F9FA; /* Светло-серый фон */
+  --foreground: #212529; /* Тёмный текст */
+  --card: #FFFFFF; /* Белые карточки */
+  --card-foreground: #212529;
+  --popover: #FFFFFF;
+  --popover-foreground: #212529;
+  --primary: #0D6EFD; /* Синий акцент */
+  --primary-foreground: #FFFFFF;
+  --secondary: #6C757D; /* Серый */
+  --secondary-foreground: #FFFFFF;
+  --muted: #E9ECEF; /* Светло-серый */
+  --muted-foreground: #6C757D;
+  --accent: #0D6EFD; /* Синий акцент */
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC3545; /* Красный */
+  --destructive-foreground: #FFFFFF;
+  --border: #DEE2E6; /* Светлая граница */
+  --input: #DEE2E6;
+  --ring: #0D6EFD;
+  --gold: #D4AF37; /* Золотой для заголовков */
+  --chart-1: #0D6EFD;
+  --chart-2: #0A58CA;
+  --chart-3: #084298;
+  --chart-4: #6C757D;
+  --chart-5: #ADB5BD;
+  --radius: 0.5rem;
+  --sidebar: #F8F9FA;
+  --sidebar-foreground: #212529;
+  --sidebar-primary: #0D6EFD;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E9ECEF;
+  --sidebar-accent-foreground: #212529;
+  --sidebar-border: #DEE2E6;
+  --sidebar-ring: #0D6EFD;
   --shadow-x: 0px;
-  --shadow-y: 1px;
-  --shadow-blur: 2px;
+  --shadow-y: 2px;
+  --shadow-blur: 8px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.05;
+  --shadow-opacity: 0.1;
   --shadow-color: #000000;
 }
 
 .dark {
-  --background: #2d2621;
-  --foreground: #ece5d8;
-  --card: #3a322c;
-  --card-foreground: #ece5d8;
-  --popover: #3a322c;
-  --popover-foreground: #ece5d8;
-  --primary: #c0a080;
-  --primary-foreground: #2d2621;
-  --secondary: #4a4039;
-  --secondary-foreground: #ece5d8;
-  --muted: #3a322c;
-  --muted-foreground: #c5bcac;
-  --accent: #59493e;
-  --accent-foreground: #ece5d8;
-  --destructive: #b54a35;
-  --destructive-foreground: #ffffff;
-  --border: #4a4039;
-  --input: #4a4039;
-  --ring: #c0a080;
-  --chart-1: #c0a080;
-  --chart-2: #b3906f;
-  --chart-3: #a67c52;
-  --chart-4: #8d6e4c;
-  --chart-5: #735a3a;
-  --sidebar: #2d2621;
-  --sidebar-foreground: #ece5d8;
-  --sidebar-primary: #c0a080;
-  --sidebar-primary-foreground: #2d2621;
-  --sidebar-accent: #59493e;
-  --sidebar-accent-foreground: #ece5d8;
-  --sidebar-border: #4a4039;
-  --sidebar-ring: #c0a080;
+  /* Тёмная тема с синим акцентом */
+  --background: #212529; /* Тёмный фон */
+  --foreground: #F8F9FA; /* Светлый текст */
+  --card: #343A40; /* Тёмные карточки */
+  --card-foreground: #F8F9FA;
+  --popover: #343A40;
+  --popover-foreground: #F8F9FA;
+  --primary: #0D6EFD; /* Синий акцент */
+  --primary-foreground: #FFFFFF;
+  --secondary: #6C757D; /* Серый */
+  --secondary-foreground: #F8F9FA;
+  --muted: #495057; /* Средне-серый */
+  --muted-foreground: #ADB5BD;
+  --accent: #0D6EFD;
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC3545;
+  --destructive-foreground: #FFFFFF;
+  --border: #495057;
+  --input: #495057;
+  --ring: #0D6EFD;
+  --gold: #D4AF37; /* Золотой */
+  --chart-1: #0D6EFD;
+  --chart-2: #0A58CA;
+  --chart-3: #084298;
+  --chart-4: #6C757D;
+  --chart-5: #ADB5BD;
+  --sidebar: #212529;
+  --sidebar-foreground: #F8F9FA;
+  --sidebar-primary: #0D6EFD;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #495057;
+  --sidebar-accent-foreground: #F8F9FA;
+  --sidebar-border: #495057;
+  --sidebar-ring: #0D6EFD;
   --shadow-x: 0px;
-  --shadow-y: 1px;
-  --shadow-blur: 2px;
+  --shadow-y: 2px;
+  --shadow-blur: 8px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.05;
+  --shadow-opacity: 0.2;
   --shadow-color: #000000;
 }
 
@@ -200,19 +204,46 @@
   
   html {
     scroll-behavior: smooth;
+    font-size: 16px;
   }
   
   body {
     @apply bg-background text-foreground;
-    line-height: 1.6;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Адаптивный базовый размер текста */
+    font-size: clamp(18px, 1.125vw, 28px);
   }
   
-  /* ✅ Улучшенная типографика */
+  /* ✅ Улучшенная типографика с золотыми заголовками */
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-    font-weight: 600;
+    line-height: 1.3;
+    font-weight: 700;
+    color: rgb(212 175 55); /* Золотой */
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.75rem, 3.5vw, 3.5rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+  }
+  
+  h4 {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+  }
+  
+  p {
+    color: rgb(33 37 41); /* Тёмно-серый */
+    font-size: clamp(1rem, 1.25vw, 1.75rem);
+    line-height: 1.8;
   }
   
   /* ✅ Доступность для пользователей с нарушениями моторики */
@@ -263,5 +294,52 @@
     h3 {
       page-break-after: avoid;
     }
+  }
+  
+  /* ✅ Утилитные классы для дизайна */
+  .text-gold {
+    color: rgb(212 175 55) !important;
+  }
+  
+  .bg-gold {
+    background-color: rgb(212 175 55) !important;
+  }
+  
+  .border-gold {
+    border-color: rgb(212 175 55) !important;
+  }
+  
+  /* Улучшенные карточки с тенью */
+  .card-enhanced {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .card-enhanced:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+  
+  /* Синие кнопки */
+  .btn-blue {
+    background-color: rgb(13 110 253);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-blue:hover {
+    background-color: rgb(10 88 202);
+    transform: scale(1.02);
+  }
+  
+  /* Адаптивный контейнер */
+  .container-responsive {
+    padding-left: clamp(1rem, 5vw, 3rem);
+    padding-right: clamp(1rem, 5vw, 3rem);
   }
 }
